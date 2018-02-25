@@ -8,7 +8,7 @@ const cors = require("cors");
 app.use(cors());
 app.use(bodyParser.json());
 
-app.post("/signup", function (req, res, next) {
+app.post("/signup", function (req, res) {
 
     if (!req.body.recaptchaToken) {
         return res.status(400).json({message: "recaptchaToken is required"});
@@ -48,4 +48,12 @@ app.listen(port, function (err) {
         throw err;
     }
     console.log("API running on port " + port);
+});
+
+
+app.get("/", function (req, res) {
+    res.json({
+        name: "vue-recaptcha-demo-api",
+        status: "running"
+    });
 });

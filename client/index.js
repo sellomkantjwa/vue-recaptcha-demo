@@ -12,7 +12,7 @@ new Vue({
             const self = this;
             self.status = "submitting";
             self.$refs.recaptcha.reset();
-            axios.post("http://localhost:3000/signup", {
+            axios.post("https://vue-recaptcha-demo.herokuapp.com/signup", {
                 email: self.email,
                 password: self.password,
                 recaptchaToken: recaptchaToken

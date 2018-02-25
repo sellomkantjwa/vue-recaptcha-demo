@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "production": "pm2 startOrRestart ecosystem.json --no-daemon --only lgm-js",
-    "dev": "node"
+    "start": "node index"
   },
   "repository": "https://github.com/sellomkantjwa/vue-recaptcha-demo.git",
   "author": "Sello Mkantjwa <giza182@gmail.com>",
