@@ -7,60 +7,62 @@
 </head>
 <body>
 <div id="app">
-    <div class="content">
+    <div>
         <h1 style="text-align: center">Vue Recaptcha Demo</h1>
-        <div v-show="!sucessfulServerResponse" class="auth-form-wrapper">
-            <form class="auth-form" @submit.prevent="submit">
+        <div class="content">
+            <div v-show="!sucessfulServerResponse" class="auth-form-wrapper">
+                <form class="auth-form" @submit.prevent="submit">
 
-                <div class="header">
-                    <h1>
-                        Sign up
-                    </h1>
-                </div>
-
-
-                <div class="input-group">
-                    <label for="email">email
-                    </label>
-                    <input v-model="email" required placeholder="name@domain.com" class="" name="email"
-                           id="email"/>
-                </div>
-
-                <div class="input-group">
-                    <label for="password">password</label>
-                    <input required v-model="password" type="password" placeholder="password" class=""
-                           name="password" id="password"/>
-                </div>
-                <div class="input-group">
-                    <label for="password-confirmation">confirm password
-                    </label>
-                    <input required type="password" placeholder="confirm password" class=""
-                           name="password confirmation"
-                           id="password-confirmation"/>
-                </div>
-
-                <div class="input-group">
-                    <vue-recaptcha
-                            ref="recaptcha"
-                            @verify="onCaptchaVerified"
-                            @expired="onCaptchaExpired"
-                            size="invisible"
-                            sitekey="6LfJA0gUAAAAAA4YDXBubWMll55x5xLpyzu6n60G">
-                    </vue-recaptcha>
-                    <button :disabled="status==='submitting'" type="submit" class="button">sign up</button>
-                </div>
-
-                <div v-cloak class="">
-                    <div v-show="serverError">
-                        {{serverError}}
+                    <div class="header">
+                        <h1>
+                            Sign up
+                        </h1>
                     </div>
-                </div>
-            </form>
-        </div>
 
-        <div class="successful-server-response-wrapper">
-            <div v-show="sucessfulServerResponse" class="successful-server-response" v-cloak>
-                {{sucessfulServerResponse}}
+
+                    <div class="input-group">
+                        <label for="email">email
+                        </label>
+                        <input v-model="email" required placeholder="name@domain.com" class="" name="email"
+                               id="email"/>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="password">password</label>
+                        <input required v-model="password" type="password" placeholder="password" class=""
+                               name="password" id="password"/>
+                    </div>
+                    <div class="input-group">
+                        <label for="password-confirmation">confirm password
+                        </label>
+                        <input required type="password" placeholder="confirm password" class=""
+                               name="password confirmation"
+                               id="password-confirmation"/>
+                    </div>
+
+                    <div class="input-group">
+                        <vue-recaptcha
+                                ref="recaptcha"
+                                @verify="onCaptchaVerified"
+                                @expired="onCaptchaExpired"
+                                size="invisible"
+                                sitekey="6LfJA0gUAAAAAA4YDXBubWMll55x5xLpyzu6n60G">
+                        </vue-recaptcha>
+                        <button :disabled="status==='submitting'" type="submit" class="button">sign up</button>
+                    </div>
+
+                    <div v-cloak class="">
+                        <div v-show="serverError">
+                            {{serverError}}
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="successful-server-response-wrapper">
+                <div v-show="sucessfulServerResponse" class="successful-server-response" v-cloak>
+                    {{sucessfulServerResponse}}
+                </div>
             </div>
         </div>
     </div>

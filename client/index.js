@@ -19,7 +19,23 @@ new Vue({
             }).then((response) => {
                 self.sucessfulServerResponse = response.data.message;
             }).catch((err) => {
-                self.serverError = err.message;
+                self.serverError = getErrorMessage(err);
+
+
+                //helper to get a displayable message to the user
+                function getErrorMessage(err) {
+                    let responseBody;
+                    responseBody = err.response;
+                    if (!responseBody) {
+                        responseBody = err;
+                    } else {
+                        responseBody = err.response.data || responseBody;
+                    }
+                    return responseBody.message || JSON.stringify(responseBody);
+                }
+
+            }).then(() => {
+                self.status = "";
             });
 
 

@@ -110,9 +110,12 @@ button:hover:disabled {
 .content {
     display: flex;
     flex-direction: column;
-    height: 100vh;
     align-content: center;
     justify-content: center;
+}
+
+html {
+    height: 100vh;
 }
 
 [v-cloak] > * {
