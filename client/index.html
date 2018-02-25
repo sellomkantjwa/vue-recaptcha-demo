@@ -7,9 +7,9 @@
 </head>
 <body>
 <div id="app">
-    <div>
+    <div class="content">
         <h1 style="text-align: center">Vue Recaptcha Demo</h1>
-        <div class="auth-form-wrapper">
+        <div v-show="!sucessfulServerResponse" class="auth-form-wrapper">
             <form class="auth-form" @submit.prevent="submit">
 
                 <div class="header">
@@ -50,21 +50,26 @@
                     <button :disabled="status==='submitting'" type="submit" class="button">sign up</button>
                 </div>
 
-                <div class="alert-wrapper">
-                    <div v-show="registrationError" class="alert">
-                        {{registrationError}}
+                <div v-cloak class="">
+                    <div v-show="serverError">
+                        {{serverError}}
                     </div>
                 </div>
             </form>
         </div>
 
-
+        <div class="successful-server-response-wrapper">
+            <div v-show="sucessfulServerResponse" class="successful-server-response" v-cloak>
+                {{sucessfulServerResponse}}
+            </div>
+        </div>
     </div>
 </div>
 <script src="https://unpkg.com/vue@latest/dist/vue.js" defer></script>
 <script src="https://www.google.com/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit" async defer>
 </script>
 <script src="https://unpkg.com/vue-recaptcha@latest/dist/vue-recaptcha.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js" defer></script>
 <script type="text/javascript" src="index.js" defer></script>
 </body>
 </html>

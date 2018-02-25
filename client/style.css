@@ -45,7 +45,7 @@ button:active {
 }
 
 button:disabled {
-    opacity: 0.85;
+    opacity: 0.4;
     cursor: default;
 }
 
@@ -88,4 +88,33 @@ button:hover:disabled {
 
 .auth-form-wrapper .auth-form .header img {
     width: 50px;
+}
+
+.successful-server-response-wrapper {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.successful-server-response {
+    text-align: center;
+    max-width: 500px;
+    font-size: 36px;
+    background-color: #5cb85c;
+    color: #f1f1f1;
+    padding: 20px;
+    border-radius: 3px;
+
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-content: center;
+    justify-content: center;
+}
+
+[v-cloak] > * {
+    display: none
 }
