@@ -1,0 +1,91 @@
+html,
+body {
+    font-family: "Roboto", sans-serif;
+    color: #888;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    background: #fff;
+    -webkit-font-smoothing: antialiased;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    min-height: 34px;
+    padding: 2px 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+label {
+    padding: 5px 0;
+}
+
+button, .button {
+    padding: 10px;
+    min-height: 34px;
+    border-radius: 2px;
+    border: 1px solid #4a90e2;
+    cursor: pointer;
+    color: #fff;
+    background-color: #4a90e2;
+    transition: background-color, border-color;
+}
+
+button:hover, .button:hover {
+    color: #4a90e2;
+    background-color: #fff;
+}
+
+button:active {
+    color: #fff;
+    background-color: #4a90e2;
+
+}
+
+button:disabled {
+    opacity: 0.85;
+    cursor: default;
+}
+
+button:hover:disabled {
+    color: #fff;
+    background-color: #4a90e2;
+    cursor: default;
+}
+
+.input-group {
+    padding: 5px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.auth-form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.auth-form-wrapper .auth-form {
+    display: flex;
+    flex-direction: column;
+    background: #f1f1f1;
+    padding: 40px;
+    width: 350px;
+}
+
+.auth-form-wrapper .auth-form .prompt-wrapper {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.auth-form-wrapper .auth-form .header {
+    align-self: center;
+    text-align: center;
+}
+
+.auth-form-wrapper .auth-form .header img {
+    width: 50px;
+}

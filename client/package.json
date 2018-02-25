@@ -1,0 +1,11 @@
+{
+  "name": "recaptcha-demo",
+  "version": "1.0.0",
+  "description": "How to use recaptcha with Vue",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sello Mkantjwa",
+  "license": "MIT"
+}
