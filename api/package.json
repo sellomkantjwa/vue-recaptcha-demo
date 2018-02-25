@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon"
+    "production": "pm2 startOrRestart ecosystem.json --no-daemon --only lgm-js",
+    "dev": "node"
   },
+  "repository": "https://github.com/sellomkantjwa/vue-recaptcha-demo.git",
   "author": "Sello Mkantjwa <giza182@gmail.com>",
   "license": "ISC",
   "dependencies": {
