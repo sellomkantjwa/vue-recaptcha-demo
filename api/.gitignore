@@ -1,0 +1,5 @@
+node_modules/
+.idea/
+Dockerfile
+ecosystem.json
+deploy.sh
