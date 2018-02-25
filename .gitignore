@@ -1,2 +1,4 @@
 api/node_modules/
 .idea/
+/api/Dockerfile
+/api/ecosystem.json
